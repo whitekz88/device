@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Device</title>
-    <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="main-header">
       <a class="main-header__logo logo" href="#">
-        <img src="#" alt="Логотип магазина Device." width="145" height="36">
+        <img class="main-header__image" src="#" alt="Логотип магазина Device." width="145" height="36">
       </a>
+      <form class="main-header__form search-form" method="post" action="https://echo.htmlacademy.ru/">
+        <label class="search-form__label visually-hidden" for="search-input">Поиск по сайту</label>
+        <input class="search-form__input" name="search-text" type="text" id="search-input" placeholder="Поиск по сайту">
+        <button class="search-form__button" type="submit">Найти</button>
+      </form>
       <nav class="main-header__usernav usernav">
-        <form class="usernav__form search-form" method="post" action="https://echo.htmlacademy.ru/">
-          <label for="search-input">Поиск по сайту:</label>
-          <input name="search-text" type="text" id="search-input" placeholder="Поиск по сайту">
-          <button type="submit">Найти</button>
-        </form>
-        <div class="usernav__authorisation">
-          <button type="button">Войти</button>
-        </div>
+        <ul class="usernav__authorisation authorisation">
+          <li class="authorisation__item">
+            <a class="authorisation__link visually-hidden" href="#">Выйти</a>
+            <a class="authorisation__link" href="#">Войти</a>
+          </li>
+        </ul>
         <ul class="usernav__list">
           <li class="usernav__item">
             <a class="usernav__link" href="#">Сравнить</a>
           </li>
           <li class="usernav__item">
-            <button type="button" class="usernav__link" href="#"><span>12</span>Корзина</button>
+            <a class="usernav__link" href="#">
+              <span>2</span>
+              Корзина
+            </a>
           </li>
         </ul>
       </nav>
       <nav class="main-header__navbar navbar">
         <div class="navbar__submenu submenu">
-          <a href="#">Каталог товаров</a>
+          <a class="submenu__title" href="#">Каталог товаров</a>
           <ul class="submenu__list">
             <li class="submenu__item">
               <a class="submenu__link" href="#">Виртуальная реальность</a>
@@ -69,27 +75,79 @@
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
       <section class="slider">
         <h2 class="visually-hidden">Популярные товары</h2>
+        <button class="slider__prev-button" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="slider__next-button" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
           <ul class="slider__list">
-            <li>
-              <img class="slider__img" src="#" alt="">
-              <button class="slider__button-prev" type="button"></button>
-              <button class="slider__button-next" type="button"></button>
+            <li class="slider__item">
+              <img class="slider__img" src="#" alt="Квадракоптер">
               <h3 class="slider__subtitle">Порхает как бабочка, жалит как пчела!</h3>
               <p class="slider__description">Этот обычный, на первый взгляд, квадракоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="slider__link" href="#">Подробнее</a>
-              <p class="slider__properties">800 м
-                <span>Дальность полета</span>
-              </p>
-              <p class="slider__properties">50 м
-                <span>Радиус поражения</span>
-              </p>
-              <ol>
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-                <li><button type="button"></button></li>
-              </ol>
+              <a class="slider__link button" href="#">Подробнее</a>
+              <ul class="slider__properties-list">
+                <li class="slider__properties-item">
+                  <p class="slider__properties-value">800 м</p>
+                  <p class="slider__properties-description">Дальность полета</p>
+                </li>
+                <li class="slider__properties-item">
+                  <p class="slider__properties-value">50 м</p>
+                  <p class="slider__properties-description">Радиус поражения</p>
+                </li>
+              </ul>
+            </li>
+            <li class="slider__item visually-hidden">
+              <img class="slider__img" src="#" alt="Квадракоптер">
+              <h3 class="slider__subtitle">Худеем правильно!</h3>
+              <p class="slider__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+              <a class="slider__link button" href="#">Подробнее</a>
+              <ul class="slider__properties-list">
+                <li class="slider__properties-item">
+                  <p class="slider__properties-value">48 часов</p>
+                  <p class="slider__properties-description">Без подзарядки</p>
+                </li>
+              </ul>
+            </li>
+            <li class="slider__item visually-hidden">
+              <img class="slider__img" src="#" alt="Квадракоптер">
+              <h3 class="slider__subtitle">Делай селфи, как Бен Стиллер!</h3>
+              <p class="slider__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+              <a class="slider__link button" href="#">Подробнее</a>
+              <ul class="slider__properties-list">
+                <li class="slider__properties-item">
+                  <p class="slider__properties-value">8,5 м</p>
+                  <p class="slider__properties-description">Длина палки</p>
+                </li>
+                <li class="slider__properties-item">
+                  <p class="slider__properties-value">5 кг</p>
+                  <p class="slider__properties-description">Вес палки</p>
+                </li>
+                <li class="slider__properties-item">
+                  <p class="slider__properties-value">Карбон</p>
+                  <p class="slider__properties-description">Материал</p>
+                </li>
+              </ul>
             </li>
           </ul>
+          <ol class="slider__toggle-list">
+            <li class="lider__toggle-item">
+              <a href="#" class="lider__toggle-link">
+                <span class="visually-hidden">Слайдер-1</span>
+              </a>
+            </li>
+            <li class="lider__toggle-item">
+              <a href="#" class="lider__toggle-link">
+                <span class="visually-hidden">Слайдер-2</span>
+              </a>
+            </li>
+            <li class="lider__toggle-item">
+              <a href="#" class="lider__toggle-link">
+                <span class="visually-hidden">Слайдер-3</span>
+              </a>
+            </li>
+          </ol>
       </section>
     </main>
   </body>
