@@ -7,60 +7,60 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="logo main-header__logo" href="#">
+      <a class="main-header__logo logo" href="#">
         <img src="#" alt="Логотип магазина Device." width="145" height="36">
       </a>
-      <nav class="usernav">
-        <form class="search-form usernav__form" method="post" action="https://echo.htmlacademy.ru/">
+      <nav class="main-header__usernav usernav">
+        <form class="usernav__form" method="post" action="https://echo.htmlacademy.ru/">
           <label for="search-input">Поиск по сайту:</label>
           <input name="search-text" type="text" id="search-input" placeholder="Поиск по сайту">
           <button type="submit">Найти</button>
         </form>
-        <ul class="authorisation">
-          <li><button type="button">Войти</button></li>
-        </ul>
+        <div class="usernav__authorisation">
+          <button type="button">Войти</button>
+        </div>
         <ul class="usernav__list">
           <li class="usernav__item">
-            <a class="usernav__list" href="#">Сравнить</a>
+            <a class="usernav__link" href="#">Сравнить</a>
           </li>
           <li class="usernav__item">
-            <button type="button" class="usernav__list" href="#"><span>12</span>Корзина</button>
+            <button type="button" class="usernav__link" href="#"><span>12</span>Корзина</button>
           </li>
         </ul>
       </nav>
-      <nav class="navbar">
-        <ul class="navbar__list">
-          <li class="navbar__item">
-            <a href="#">Каталог товаров</a>
-            <ul class="submenu">
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Моноподы для cелфи</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Умные часы</a>
-              </li>
-              <li class="submenu__item">
-                <a class="submenu__link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
+      <nav class="main-header__navbar navbar">
+        <div class="navbar__submenu submenu">
+          <a href="#">Каталог товаров</a>
+          <ul class="submenu__list">
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Моноподы для cелфи</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Умные часы</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar__list menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Доставка</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Доставка</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Гарантия</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Гарантия</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Отзывы</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -69,15 +69,15 @@
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
       <section class="slider">
         <h2 class="visually-hidden">Популярные товары</h2>
-          <ul>
+          <ul class="slider__list">
             <li>
-              <img src="#" alt="">
-              <button type="button"></button>
-              <button type="button"></button>
-              <h3></h3>
-              <p></p>
-              <a href="#"></a>
-              <p></p>
+              <img class="slider__img" src="#" alt="">
+              <button class="slider__button-prev" type="button"></button>
+              <button class="slider__button-next" type="button"></button>
+              <h3 class="slider__subtitle">Порхает как бабочка, жалит как пчела!</h3>
+              <p class="slider__description">Этот обычный, на первый взгляд, квадракоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              <a class="slider__link" href="#">Подробнее</a>
+              <p>800 м</p>
               <p></p>
               <ol>
                 <li><button type="button"></button></li>
